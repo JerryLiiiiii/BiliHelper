@@ -251,6 +251,12 @@ BiliHelper/
 - 思路与代码结构参考了社区开源项目 [damaihelper](https://github.com/Guyungy/damaihelper)
 - 感谢所有开源贡献者
 
+## 支持💕
+
+如果你在本项目的帮助下成功抢到票，欢迎在以下平台支持我，这有助于开发出更优质的工具：
+- [**Ko-fi**](https://ko-fi.com/jerryliiiiii) ☕️ Buy me a coffee
+- [🇨🇳**爱发电**](https://afdian.com/a/JerryLiiiiii) 推荐中国大陆用户
+
 ## License
 
 MIT License, 详见 [LICENSE](LICENSE)
