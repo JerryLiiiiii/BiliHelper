@@ -395,8 +395,13 @@ class BiliTicker(object):
                         return
                 elif time() - last_report > 30:
                     total = sum(len(s.get("ticket_list") or []) for s in screens)
-                    print("---[%s] 监控中(第%s次): 共%s个票档,仍在等待余票---"
-                          % (strftime("%H:%M:%S"), n, total))
+                    watched = 0
+                    for si in self.sess:
+                        if 1 <= si <= len(screens):
+                            tickets = screens[si - 1].get("ticket_list") or []
+                            watched += sum(1 for pi in self.price if 1 <= pi <= len(tickets))
+                    print("---[%s] 监控中(第%s次): 接口共%s个票档 | 本脚本盯着 %s 个候选(场次%s × 票档%s), 全部无票,继续等待---"
+                          % (strftime("%H:%M:%S"), n, total, watched, self.sess, self.price))
                     last_report = time()
             except (URLError, OSError, ValueError) as e:
                 errs += 1
