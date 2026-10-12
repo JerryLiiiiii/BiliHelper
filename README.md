@@ -108,8 +108,18 @@ pip install -r requirements.txt
 1. 按「环境准备」完成三件事: 克隆并进入项目文件夹 → 创建并激活虚拟环境 → 安装依赖(之后每次运行脚本前, 记得先激活虚拟环境);
 2. 创建配置文件:
    `config.json.example` 是仓库提供的**配置模板**, 请复制一份为 `config.json` 再修改(不要直接在模板文件上改, 拉取更新时会被覆盖):
-   - macOS / Linux: `cp config.json.example config.json`
-   - Windows: `copy config.json.example config.json`
+   - macOS / Linux: 
+
+   ```bash
+   cp config.json.example config.json
+   ```
+
+   - Windows: 
+
+   ```powershell
+   copy config.json.example config.json
+   ```
+
 3. 打开 `config.json`, 参照注释填写演出 ID、场次 / 票档优先级、票数、观演人姓名等;
    浏览器驱动默认不用管(自动匹配); 如果你手动下载了驱动, 请把驱动文件**放进项目文件夹内**, 并把 `driver_path` 填成**相对路径**: macOS / Linux 填 `"./chromedriver"`, Windows 填 `"./chromedriver.exe"`(详见「浏览器驱动说明」);
 4. 确认终端位于项目文件夹、且虚拟环境已激活, 然后运行:
