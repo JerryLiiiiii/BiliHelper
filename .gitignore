@@ -1,0 +1,22 @@
+# ---- 敏感文件: 含登录状态与个人信息, 严禁提交 ----
+cookies.pkl
+bili_cookies.pkl
+config.json
+bili_config.json
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- 浏览器驱动(自行下载) ----
+chromedriver
+chromedriver.exe
+
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
